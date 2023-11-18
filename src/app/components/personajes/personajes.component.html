@@ -1,0 +1,22 @@
+<div>
+    <h1>Personajes</h1>
+    <table class="table table-striped text-center">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let personaje of personajes">
+                <td>{{personaje.nombre}}</td>
+                <td>
+                    <img src="{{personaje.imagen}}" style="width: 200px;">
+                </td>
+                <td>            <a [routerLink]="['/detalle/',personaje.idPersonaje]" class="btn btn-outline-info">detalle</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
